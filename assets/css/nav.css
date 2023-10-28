@@ -1,0 +1,130 @@
+.nav__container{
+    width: 90%;
+    max-width: 1600px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.logo-link img{
+    height: 50px;
+}
+
+.menu_btn{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: transparent;
+    position: relative;
+    border: none;
+    display: none;
+}
+
+.li{
+    height: 3px;
+    width: 100%;
+    background: var(--main-color-3);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.li1{
+    transform: translateY(-10px);
+}
+.li3{
+    transform: translateY(10px);
+}
+
+
+.menu_btn.active .li2{
+    background: transparent;
+}
+
+.menu_btn.active .li1{
+    transform: translateY(0) rotate(-135deg);
+}
+.menu_btn.active .li3{
+    transform: translateY(0) rotate(135deg);
+}
+
+
+.navigation_menu{
+    display: flex;
+    align-items: center;
+}
+
+.link_nav{
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.link_add{
+    color: var(--main-color-3);
+}
+.link_nav:hover .link_add{
+    color: var(--main-color-2);
+}
+
+.link_login{
+    cursor: pointer;
+    text-align: center;
+    margin:  10px;
+}
+
+.link_login .link_add{
+    width: 100%;
+    border: 2px solid var(--main-color-5);
+    padding: 5px 15px;
+    display: inline-block;
+    border-radius: 10px;
+}
+.link_login:nth-child(odd) .link_add{
+    background: var(--main-color-5);
+    background: var(--main-color-5);
+    color: var(--main-color-4);;
+}
+.link_login:hover:nth-child(even) .link_add{
+    background: var(--main-color-5);
+    color: var(--main-color-4);;
+    
+}
+
+
+@media screen and (max-width: 900px) {
+    .menu_btn{
+        display: inline-block;
+    }
+
+    .link_nav{
+        margin: 0;
+        margin-bottom: 3px;
+    }
+    
+    .navigation_menu{
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background: var(--main-color-2);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .navigation_menu.active{
+        height: 250px;
+    }
+
+    .link_nav:hover .link_add{
+        color: var(--main-color-1);
+    }
+}

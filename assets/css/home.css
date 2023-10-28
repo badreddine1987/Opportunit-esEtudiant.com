@@ -1,0 +1,16 @@
+.main__container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
+    min-height: 600vh;
+}
+
+.section_picture{
+    width: 100%;
+    height: calc(100vh - 80px);
+    max-height: 630px;
+    background: url('../img/alternante2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 20%;
+}
